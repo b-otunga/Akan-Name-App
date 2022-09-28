@@ -1,7 +1,8 @@
 const DAYS_OF_THE_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const MALE_NAMES = ["Jumatatu", "Jumanne", "Jumatano", "Alhamisi", "Ijumaa", "Jumamosi", "Jumapili"];
 const FEMALE_NAMES = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Satu", "Sun"];
-var akhaiName = null;
+var akhaiName = "";
+var gender = "";
 
 let date = document.querySelector("#Date");
 console.log(date);
@@ -15,8 +16,10 @@ date.onchange = function(){
 // fetch user's gender selection
 
 function getGenderValue () {
-    var gender = document.querySelector("#floatingSelect").value;
+    gender = document.querySelector("#floatingSelect").value;
     console.log(gender);
+    return gender;
+    
 }
 
 // determining day of birth
@@ -25,16 +28,17 @@ function getGenderValue () {
 
 // getting Akhai name
 
-function getAkhaiName(){
-    if (gender === "Male"){
-        indexOfDay = DAYS_OF_THE_WEEK.indexOf["Tuesday"];
-        akhaiName = MALE_NAMES[indexOfDay];
-    else if (gender === "Female"){
-        akhaiName = MALE_NAMES[indexOfDay];
-        console.log(akhaiName);
-    }
+// function getAkhaiName(){
+//     if (gender == "Male"){
+//     var indexOfDay = DAYS_OF_THE_WEEK.indexOf("Tuesday");
+//       akhaiName = MALE_NAMES[indexOfDay];
+//     // else if (gender === "Female"){
+//     //     akhaiName = MALE_NAMES[indexOfDay];
+//         // console.log(indexOfDay);
+// //         console.log(akhaiName);
+// //     }
 
-}
+// }
 
 
 
