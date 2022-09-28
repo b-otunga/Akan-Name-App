@@ -20,7 +20,11 @@ body {
 }
 
 #result-button{
-  margin: 3%;
+  margin: 2%;
+  font-family:'Lucida Sans Unicode';
+  border: 0ch;
+  color: rgb(254, 255, 255);
+  background-color: rgb(102, 103, 104);
 }
   #container{
     display:flex;
@@ -35,6 +39,7 @@ body {
 
   p{
     text-align:justify;
+    margin-bottom: 0.8%;
   }
 
 #content{
@@ -44,6 +49,7 @@ body {
   width: 89%;
 }
 
-  h4{
+  h3{
     margin: 1%;
+    font-family: fantasy;
   }
