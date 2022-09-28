@@ -16,19 +16,34 @@ body {
   }
 .dropdown{
   color: rgb(30, 66, 97);
+  margin: 3%;
+}
+
+#result-button{
+  margin: 3%;
 }
   #container{
     display:flex;
     align-items: center;
     flex-direction: column;
-    height: 400px;
-    width: 450px;
+    height: 70%;
+    width: 70%;
     background-color: rgb(91, 94, 128);
     color: rgb(242, 240, 255);
    
   }
 
+  p{
+    text-align:justify;
+  }
+
+#content{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  width: 89%;
+}
+
   h4{
-    margin:0px;
-    padding:0px;
+    margin: 1%;
   }
