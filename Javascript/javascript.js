@@ -25,6 +25,16 @@ function getGenderValue () {
 
 // getting Akhai name
 
+function getAkhaiName(){
+    if (gender === "Male"){
+        indexOfDay = DAYS_OF_THE_WEEK.indexOf["Tuesday"];
+        akhaiName = MALE_NAMES[indexOfDay];
+    else if (gender === "Female"){
+        akhaiName = MALE_NAMES[indexOfDay];
+        console.log(akhaiName);
+    }
+
+}
 
 
 
