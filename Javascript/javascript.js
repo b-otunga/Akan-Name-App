@@ -1,7 +1,7 @@
 const DAYS_OF_THE_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-const MALE_NAMES = [];
-const FEMALE_NAMES = [];
-var name = null
+const MALE_NAMES = ["Jumatatu", "Jumanne", "Jumatano", "Alhamisi", "Ijumaa", "Jumamosi", "Jumapili"];
+const FEMALE_NAMES = ["Mon", "Tue", "Wed", "Thurs", "Fri", "Satu", "Sun"];
+var akhaiName = null;
 
 let date = document.querySelector("#Date");
 console.log(date);
@@ -14,12 +14,18 @@ date.onchange = function(){
 
 // fetch user's gender selection
 
-let gender = document.querySelector(".dropdown-menu");
+function getGenderValue () {
+    var gender = document.querySelector("#floatingSelect").value;
+    console.log(gender);
+}
 
-gender.addEventListener("change", () => {XPathResult.innerText = selection.options[selection.selectedIndex].text});
-
-
-console.log(gender)
+// determining day of birth
 
 
 
+// getting Akhai name
+
+
+
+
+// https://www.youtube.com/watch?v=E7lhNyG1wE0

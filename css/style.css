@@ -14,9 +14,11 @@ body {
     min-height: 100%;
     z-index: -100;
   }
-.dropdown{
-  color: rgb(30, 66, 97);
+.form-select{
+  background-color: rgb(118, 146, 171);
   margin: 3%;
+  color: aliceblue;
+  font-family: "monospace";
 }
 
 #result-button{

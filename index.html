@@ -19,38 +19,39 @@
   </head>
   <body>
     <div id="container">
+      <div id="content">
+        <h3>Akhan Name App</h3>
 
-    <div id = "content">
-      <h3>Akhan Name App</h3>
+        <p>
+          Hello! Welcome to check your Akhan name. Name Akhan in the Indian
+          origin, means Yogi; One who practises principled life. Name Akhan is
+          of Indian origin and is a Boy name. People with name Akhan are usually
+          Hindu by religion
+        </p>
 
-      <p>Hello! Welcome to check your Akhan name. Name Akhan in the Indian origin, means Yogi; One who practises principled life. Name Akhan is of Indian origin and is a Boy name. People with name Akhan are usually Hindu by religion</p>
+        <label for="Date"><strong>Select Your Birthday</strong></label>
+        <input id="Date" type="date" />
 
-      <label for="Date"><strong>Select Your Date of Birth</strong></label>
-      <input id="Date" type="date"/>
+        <!-- <div class="form-floating"> -->
 
-      <!-- class="form-control"  -->
-      <div class="dropdown">
-        <button
-          class="btn btn-secondary dropdown-toggle"
-          type="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+        <!-- <label for="floatingSelect">Gender</label> -->
+        <select
+          class="form-select"
+          id="floatingSelect"
+          aria-label="Floating label select example" onchange="getGenderValue()"
         >
-          Choose your gender
-        </button>
-        <ul class="dropdown-menu">
-          <li><button class="dropdown-item" type="button">Male</button></li>
-          <li><button class="dropdown-item" type="button">Female</button></li>
-        </ul>
+          <option selected disabled hidden>Choose your Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
       </div>
 
-      <button type="button" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-primary" onclick="getAkhaiName()">Submit</button>
 
-      <button type="button" class="btn btn-info" id = "result-button">Hi, you were born on a Tuesday, thus your Akhan name is Udu</button>
-      <label for="text"><strong>Type your gender</strong></label>
-      <input type ="text" placeholder="Type male or female">
+      <button type="button" class="btn btn-info" id="result-button">
+        Hi, you were born on a Tuesday, thus your Akhan name is Udu
+      </button>
     </div>
-
 
     <!-- JavaScript Bundle with Popper from bootstrap-->
     <script
@@ -58,7 +59,7 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
-<!-- custom javascript -->
+    <!-- custom javascript -->
     <script src="Javascript/javascript.js"></script>
   </body>
 </html>
