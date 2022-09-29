@@ -63,7 +63,6 @@ function getAkanName(){
       console.log("Your Akan Name is " + akanName);
     }
     else if (gender === "Female"){
-
         akanName = FEMALE_NAMES[y];
        console.log("Your Akan Name is " + akanName);}
 else{alert("Please Pick Your Gender");
