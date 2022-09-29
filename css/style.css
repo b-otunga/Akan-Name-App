@@ -15,8 +15,8 @@ body {
     z-index: -100;
   }
 .form-select{
-  background-color: rgb(118, 146, 171);
-  margin: 3%;
+  background-color: rgb(100, 108, 114);
+  margin: 4.5%;
   color: aliceblue;
   font-family: "monospace";
 }
@@ -32,7 +32,7 @@ body {
     display:flex;
     align-items: center;
     flex-direction: column;
-    height: 70%;
+    height: 73%;
     width: 70%;
     background-color: rgb(91, 94, 128);
     color: rgb(242, 240, 255);
@@ -41,7 +41,7 @@ body {
 
   p{
     text-align:justify;
-    margin-bottom: 0.8%;
+    margin-bottom: 1%;
   }
 
 #content{

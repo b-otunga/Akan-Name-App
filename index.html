@@ -12,9 +12,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <video autoplay muted loop id="bgVideo">
+    <!-- <video autoplay muted loop id="bgVideo">
       <source src="Videos/Space - 2381.mp4" type="video/mp4" />
-    </video>
+    </video> -->
     <title>Akhan Name App</title>
   </head>
   <body>
@@ -23,14 +23,29 @@
         <h3>Akhan Name App</h3>
 
         <p>
-          Hello! Welcome to check your Akhan name. Name Akhan in the Indian
-          origin, means Yogi; One who practises principled life. Name Akhan is
-          of Indian origin and is a Boy name. People with name Akhan are usually
-          Hindu by religion
+          Hello! Welcome to check your Akhan name. Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day names.
         </p>
 
-        <label for="Date"><strong>Select Your Birthday</strong></label>
-        <input id="Date" type="date" />
+        <!-- <label for="Date"><strong>Select Your Birthday</strong></label>
+        <input id="Date" type="date" value="" max="1979-12-31" value = "">
+
+        <input type="date" id="Date" name="datemax" required max="2022-09-30" value = ""><br> -->
+
+        <label for="date" class="form-label">Date of Birth:</label>
+
+              <input
+
+                type="date"
+
+                class="form-control"
+
+                required
+
+                id="Date"
+
+                placeholder="15/06/1998"
+
+              />
 
         <!-- <div class="form-floating"> -->
 
@@ -46,10 +61,10 @@
         </select>
       </div>
 
-      <button type="button" class="btn btn-primary" onclick="getAkhaiName()">Submit</button>
+      <button type="button" class="btn btn-primary" onclick="getAkanName()">Check Now</button>
 
       <button type="button" class="btn btn-info" id="result-button">
-        Hi, you were born on a Tuesday, thus your Akhan name is Udu
+
       </button>
     </div>
 
