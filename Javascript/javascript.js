@@ -25,13 +25,18 @@ const FEMALE_NAMES = [
   "Afua",
   "Ama",
 ];
-var akanName;
-var gender;
-var dateEntered;
-var day;
+var akanName
+var gender
+var currentDate
+var dateEntered
+var day
 
 // calculate today's date
-var currentDate = new Date();
+function getTodayDate(){
+currentDate = new Date();
+console.log(currentDate);
+}
+
 
 // FETCH DATE entered by user on input
 function getDate() {
@@ -57,11 +62,15 @@ function getDate() {
   day = Math.floor(day);
 }
 
-// function limiting date selection to today
+// function limiting date selection to today or before
 
 function noFutureDate() {
   parsedcurrentDate = Date.parse(currentDate);
   parseddateEntered = Date.parse(dateEntered);
+// subtract three hours to make entered date UTC time
+  parseddateEntered = parseddateEntered - 10800000;
+  console.log("current" + parsedcurrentDate);
+  console.log("entered" + parseddateEntered);
   if (parseddateEntered > currentDate) {
     alert("You've selected a date that is later than today");
     location.reload();
@@ -81,6 +90,7 @@ function getGenderValue() {
 // CREATE AKAN NAME
 
 function getAkanName() {
+  getTodayDate()
   getDate();
 
   // throw error for invalid date
@@ -102,7 +112,7 @@ function getAkanName() {
       akanName +
       ".";
   } else if (gender === "Female") {
-    akanName = FEMALE_NAMES[y];
+    akanName = FEMALE_NAMES[day];
     document.getElementById("result-button").innerHTML =
       "You were born on a " +
       DAYS_OF_THE_WEEK[day] +
