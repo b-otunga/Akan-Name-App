@@ -9,12 +9,13 @@ var y
 // FETCH DATE FROM INPUT
 function getDate () {
     datenow = document.getElementById("Date").value;
+    if (!datenow){alert("Please pick your birthday")};
     // return datenow;
     datenow = datenow.toString();
     var CC = datenow.slice(0, 2);
 console.log(CC)
 CC = parseInt(CC);
-console.log(CC)
+console.log(CC);
 var YY = datenow.slice (2, 4);
 YY = parseInt(YY);
 var MM = datenow.slice(5, 7);
@@ -55,6 +56,7 @@ return gender;
 
 function getAkanName(){
     getDate ();
+    
     console.log(y);
 
     if (gender === "Male"){
