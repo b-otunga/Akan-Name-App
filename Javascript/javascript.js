@@ -1,15 +1,18 @@
 const DAYS_OF_THE_WEEK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const MALE_NAMES = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 const FEMALE_NAMES = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-var akanName;
-var gender;
-var datenow;
+var akanName
+var gender
+var datenow
 var y
+// var parsedDateNow
+var currentTime = new Date();
+
+
 
 // FETCH DATE FROM INPUT
 function getDate () {
     datenow = document.getElementById("Date").value;
-
     datenow = datenow.toString();
     var CC = datenow.slice(0, 2);
 console.log(CC)
@@ -27,9 +30,17 @@ y = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + (DD - 0.5)) % 7;
 
 y = Math.floor(y);
 
-// return datenow;
-  }
 
+  }
+  
+  function noFutureDate(){
+  parsedCurrentTime = Date.parse(currentTime);
+  parsedDateNow = Date.parse(datenow);
+  if (parsedDateNow > parsedCurrentTime) {
+    alert("You've selected a date that is after today");
+    throw Error();
+   }
+};
 
 
 
@@ -46,7 +57,6 @@ function getGenderValue () {
     gender = document.querySelector("#floatingSelect").value;
     console.log(gender);
     
-
 return gender;
 }
 
@@ -56,20 +66,17 @@ return gender;
 
 function getAkanName(){
     getDate ();
+    noFutureDate()
     if (!datenow){alert("Please pick your birthday!");
     return false;
     };
-    
-    console.log(y);
-
     if (gender === "Male"){
- 
       akanName = MALE_NAMES[y];
       document.getElementById("result-button").innerHTML = "You were born on a " + DAYS_OF_THE_WEEK[y] + ". Your Akan name is " + akanName + ".";
     }
     else if (gender === "Female"){
         akanName = FEMALE_NAMES[y];
-        document.getElementById("result-button").innerHTML = "You were born on a " + DAYS_OF_THE_WEEK[y] + ". Your Akan name is " + akanName + ".";}
+        document.getElementById("result-button").innerHTML = "You were born on a " + DAYS_OF_THE_WEEK [y] + ". Your Akan name is " + akanName + ".";}
 else{alert("Please Pick Your Gender!");
 
 }
