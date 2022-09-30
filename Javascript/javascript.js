@@ -1,91 +1,118 @@
-const DAYS_OF_THE_WEEK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const MALE_NAMES = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-const FEMALE_NAMES = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-var akanName
-var gender
-var datenow
-var y
-var currentTime = new Date();
+const DAYS_OF_THE_WEEK = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const MALE_NAMES = [
+  "Kwasi",
+  "Kwadwo",
+  "Kwabena",
+  "Kwaku",
+  "Yaw",
+  "Kofi",
+  "Kwame",
+];
+const FEMALE_NAMES = [
+  "Akosua",
+  "Adwoa",
+  "Abenaa",
+  "Akua",
+  "Yaa",
+  "Afua",
+  "Ama",
+];
+var akanName;
+var gender;
+var dateEntered;
+var day;
 
-// FETCH DATE FROM INPUT
-function getDate () {
-    datenow = document.getElementById("Date").value;
-    datenow = datenow.toString();
-    var CC = datenow.slice(0, 2);
-console.log(CC)
-CC = parseInt(CC);
-console.log(CC);
-var YY = datenow.slice (2, 4);
-YY = parseInt(YY);
-var MM = datenow.slice(5, 7);
-MM = parseInt(MM);
-var DD = datenow.slice(8, 10);
-DD= parseInt(DD);
+// calculate today's date
+var currentDate = new Date();
 
-// CALCULATE DAY OF BIRTH
-y = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + (DD - 0.5)) % 7;
+// FETCH DATE entered by user on input
+function getDate() {
+  dateEntered = document.getElementById("Date").value;
+  dateEntered = dateEntered.toString();
 
-y = Math.floor(y);
-  }
-  function noFutureDate(){
-  parsedCurrentTime = Date.parse(currentTime);
-  parsedDateNow = Date.parse(datenow);
-  if (parsedDateNow > parsedCurrentTime) {
+  // slice dateEntered to get century(CC), year(YY), month(MM), and date(DD) to be used in formular.
+  var CC = dateEntered.slice(0, 2);
+  // console.log(CC);
+  CC = parseInt(CC);
+  var YY = dateEntered.slice(2, 4);
+  YY = parseInt(YY);
+  var MM = dateEntered.slice(5, 7);
+  MM = parseInt(MM);
+  var DD = dateEntered.slice(8, 10);
+  DD = parseInt(DD);
+
+  // CALCULATE DAY OF BIRTH
+  day =
+    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + (DD - 0.5)) %
+    7;
+
+  day = Math.floor(day);
+}
+
+// function limiting date selection to today
+
+function noFutureDate() {
+  parsedcurrentDate = Date.parse(currentDate);
+  parseddateEntered = Date.parse(dateEntered);
+  if (parseddateEntered > currentDate) {
     alert("You've selected a date that is later than today");
     location.reload();
     throw Error();
-   }
-};
-
-
-
-
-
-
-// // y = Math.round(y);
-
-// y = 4;
-
-// FETCH GENDER
-
-function getGenderValue () {
-    gender = document.querySelector("#floatingSelect").value;
-    console.log(gender);
-    
-return gender;
+  }
 }
 
+// FETCH GENDER from input
 
+function getGenderValue() {
+  gender = document.querySelector("#floatingSelect").value;
+  console.log(gender);
+
+  return gender;
+}
 
 // CREATE AKAN NAME
 
-function getAkanName(){
-    getDate ();
-    noFutureDate()
-    if (!datenow){alert("Please pick your birthday!");
+function getAkanName() {
+  getDate();
+
+  // throw error for invalid date
+  noFutureDate();
+
+  // throw error for null date
+  if (!dateEntered) {
+    alert("Please pick your birthday!");
     return false;
-    };
-    if (gender === "Male"){
-      akanName = MALE_NAMES[y];
-      document.getElementById("result-button").innerHTML = "You were born on a " + DAYS_OF_THE_WEEK[y] + ". Your Akan name is " + akanName + ".";
-    }
-    else if (gender === "Female"){
-        akanName = FEMALE_NAMES[y];
-        document.getElementById("result-button").innerHTML = "You were born on a " + DAYS_OF_THE_WEEK [y] + ". Your Akan name is " + akanName + ".";}
-else{alert("Please Pick Your Gender!");
+  }
 
+  // after all checks, now get Akan name
+  if (gender === "Male") {
+    akanName = MALE_NAMES[day];
+    document.getElementById("result-button").innerHTML =
+      "You were born on a " +
+      DAYS_OF_THE_WEEK[day] +
+      ". Your Akan name is " +
+      akanName +
+      ".";
+  } else if (gender === "Female") {
+    akanName = FEMALE_NAMES[y];
+    document.getElementById("result-button").innerHTML =
+      "You were born on a " +
+      DAYS_OF_THE_WEEK[day] +
+      ". Your Akan name is " +
+      akanName +
+      ".";
+  }
+
+  // throw error if no gender or something different was selected for gender
+  else {
+    alert("Please Pick Your Gender!");
+  }
 }
-
-}
-// console.log(CC);
-// // console.log(date.value.toString());
-// console.log(YY);
-// console.log(MM);
-// console.log(DD);
-// console.log(y);
-// console.log(datenow);
-  
-
-
-
-// https://www.youtube.com/watch?v=E7lhNyG1wE0
