@@ -22,7 +22,8 @@ MM = parseInt(MM);
 var DD = datenow.slice(8, 10);
 DD= parseInt(DD);
 
-y = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+// CALCULATE DAY OF BIRTH
+y = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + (DD - 0.5)) % 7;
 
 y = Math.floor(y);
 
@@ -31,7 +32,7 @@ y = Math.floor(y);
 
 
 
-// CALCULATE DAY OF BIRTH
+
 
 
 
@@ -55,7 +56,7 @@ return gender;
 
 function getAkanName(){
     getDate ();
-    if (!datenow){alert("Please pick your birthday");
+    if (!datenow){alert("Please pick your birthday!");
     return false;
     };
     
@@ -64,12 +65,12 @@ function getAkanName(){
     if (gender === "Male"){
  
       akanName = MALE_NAMES[y];
-      document.getElementById("result-button").innerHTML = "You were born on a " + DAYS_OF_THE_WEEK[y] + ". Your Akan name is " + akanName;
+      document.getElementById("result-button").innerHTML = "You were born on a " + DAYS_OF_THE_WEEK[y] + ". Your Akan name is " + akanName + ".";
     }
     else if (gender === "Female"){
         akanName = FEMALE_NAMES[y];
-        document.getElementById("result-button").innerHTML = "You were born on a " + DAYS_OF_THE_WEEK[y] + ". Your Akan name is " + akanName;}
-else{alert("Please Pick Your Gender");
+        document.getElementById("result-button").innerHTML = "You were born on a " + DAYS_OF_THE_WEEK[y] + ". Your Akan name is " + akanName + ".";}
+else{alert("Please Pick Your Gender!");
 
 }
 
