@@ -1,5 +1,8 @@
 ### Project name.
 ###Akan Names App
+
+##Live Link
+The app is live at https://b-otunga.github.io/Akan-Name-App/
 ## Project description.
 This app uses your Birthday to get an Akan name for you. Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. 
 ## Author(s) information.
