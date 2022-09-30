@@ -1,5 +1,5 @@
 ### Project name.
-Akan Names App
+####Akan Names App
 ## Project description.
 This app uses your Birthday to get an Akan name for you. Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. 
 ## Author(s) information.
@@ -13,8 +13,8 @@ Step 3 : Open the index.html file to view the application on your preferred web 
 ## BDD.
 Select your birthday from the automatic datepicker. If you do not pick a date, an error will be thrown and app will not run.
 Next, pick your gender. If you do not pick a gender, an error will be thrown and app will not run.
-Whe correct details are entered, correct result is output. Output example: (If you are male.) "You were born on a Sunday. Your akan name is Kwasi."
-If you are female, "You were born on a Sunday. Your akan name is Akosua."
+When correct details are entered, correct result is output. Output example: (If you are male.) "You were born on a Sunday. Your Akan name is Kwasi."
+If you are female, "You were born on a Sunday. Your Akan name is Akosua."
 ## Technologies used.
 The project was built using VS Code, git for version control, Google Chromer browser console, and posted on github. 
 ## Contact information.
