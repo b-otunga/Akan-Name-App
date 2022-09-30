@@ -5,10 +5,7 @@ var akanName
 var gender
 var datenow
 var y
-// var parsedDateNow
 var currentTime = new Date();
-
-
 
 // FETCH DATE FROM INPUT
 function getDate () {
@@ -29,15 +26,13 @@ DD= parseInt(DD);
 y = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + (DD - 0.5)) % 7;
 
 y = Math.floor(y);
-
-
   }
-  
   function noFutureDate(){
   parsedCurrentTime = Date.parse(currentTime);
   parsedDateNow = Date.parse(datenow);
   if (parsedDateNow > parsedCurrentTime) {
-    alert("You've selected a date that is after today");
+    alert("You've selected a date that is later than today");
+    location.reload();
     throw Error();
    }
 };
