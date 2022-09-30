@@ -72,7 +72,7 @@ function noFutureDate() {
   console.log("current" + parsedcurrentDate);
   console.log("entered" + parseddateEntered);
   if (parseddateEntered > currentDate) {
-    alert("You've selected a date that is later than today");
+    alert("Date of birth cannot be later than today");
     location.reload();
     throw Error();
   }
