@@ -37,7 +37,6 @@ currentDate = new Date();
 console.log(currentDate);
 }
 
-
 // FETCH DATE entered by user on input
 function getDate() {
   dateEntered = document.getElementById("Date").value;
