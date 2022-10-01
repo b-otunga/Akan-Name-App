@@ -25,16 +25,16 @@ const FEMALE_NAMES = [
   "Afua",
   "Ama",
 ];
-var akanName
-var gender
-var currentDate
-var dateEntered
-var day
+var akanName;
+var gender;
+var currentDate;
+var dateEntered;
+var day;
 
 // calculate today's date
-function getTodayDate(){
-currentDate = new Date();
-console.log(currentDate);
+function getTodayDate() {
+  currentDate = new Date();
+  console.log(currentDate);
 }
 
 // FETCH DATE entered by user on input
@@ -66,7 +66,7 @@ function getDate() {
 function noFutureDate() {
   parsedcurrentDate = Date.parse(currentDate);
   parseddateEntered = Date.parse(dateEntered);
-// subtract three hours to make entered date UTC time
+  // subtract three hours to make entered date UTC time
   parseddateEntered = parseddateEntered - 10800000;
   console.log("current" + parsedcurrentDate);
   console.log("entered" + parseddateEntered);
@@ -89,7 +89,7 @@ function getGenderValue() {
 // CREATE AKAN NAME
 
 function getAkanName() {
-  getTodayDate()
+  getTodayDate();
   getDate();
 
   // throw error for invalid date

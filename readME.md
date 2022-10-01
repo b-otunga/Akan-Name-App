@@ -1,5 +1,4 @@
-### Project name.
-### Akan Names App
+## Akan Names App
 
 ## Live Link
 The app is live at https://b-otunga.github.io/Akan-Name-App/

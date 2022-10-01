@@ -23,25 +23,26 @@
         <h3>Akan Name App</h3>
 
         <p>
-          Hello! Welcome to check your Akhan name. Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Click <a href="https://bit.ly/3fwAcMy" target="_blank">here</a> to see the Ghanian Akan names, and CHECK below for your actual Akan name.
+          Hello! Welcome to check your Akhan name. Akan names are derived from
+          Ghanian culture. Frequently in Ghana, children are given their first
+          name as a 'day name' which corresponds to the day in the week they
+          were born. Click
+          <a href="https://bit.ly/3fwAcMy" target="_blank">here</a> to see the
+          Ghanian Akan names, and CHECK below for your actual Akan name.
         </p>
-       <form> <label for="date" class="form-label"><strong>Pick your Birthday:</strong></label>
+        <form>
+          <label for="date" class="form-label"
+            ><strong>Pick your Birthday:</strong></label
+          >
 
-              <input
-
-                type="date"
-
-                class="form-control"
-
-                required
-                id="Date"
-
-              /> </form>
+          <input type="date" class="form-control" required id="Date" />
+        </form>
 
         <select
           class="form-select"
           id="floatingSelect"
-          aria-label="Floating label select example" onchange="getGenderValue()"
+          aria-label="Floating label select example"
+          onchange="getGenderValue()"
         >
           <option selected disabled hidden>Choose your Gender</option>
           <option value="Male">Male</option>
@@ -49,11 +50,16 @@
         </select>
       </div>
 
-      <button type="button" class="btn btn-primary" id = "Check-Now" onclick="getAkanName()">Check Now</button>
-
-      <button type="button" class="btn btn-info" id="result-button">
-
+      <button
+        type="button"
+        class="btn btn-primary"
+        id="Check-Now"
+        onclick="getAkanName()"
+      >
+        Check Now
       </button>
+
+      <button type="button" class="btn btn-info" id="result-button"></button>
     </div>
 
     <!-- JavaScript Bundle with Popper from bootstrap-->
