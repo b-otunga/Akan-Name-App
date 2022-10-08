@@ -66,7 +66,7 @@ function getDate() {
 function noFutureDate() {
   parsedCurrentDate = Date.parse(currentDate);
 
-  // converting entered date to local time (the date only formart is defaulting as UTC).
+   // converting entered date to local time (the date only formart is defaulting as UTC time).
 
   dateEntered = new Date(dateEntered); 
   let localDateEntered = dateEntered.toLocaleDateString(); 
@@ -97,14 +97,13 @@ function getAkanName() {
   getTodayDate();
   getDate();
 
-  // throw error for invalid date
-  noFutureDate();
-
   // throw error for null date
   if (!dateEntered) {
     alert("Please pick your birthday!");
     return false;
   }
+ // throw error for invalid date
+  noFutureDate();
 
   // after all checks, now get Akan name
   if (gender === "Male") {
