@@ -64,13 +64,18 @@ function getDate() {
 // function limiting date selection to today or before
 
 function noFutureDate() {
-  parsedcurrentDate = Date.parse(currentDate);
-  parseddateEntered = Date.parse(dateEntered);
-  // subtract three hours to make entered date UTC time
-  parseddateEntered = parseddateEntered - 10800000;
-  console.log("current" + parsedcurrentDate);
-  console.log("entered" + parseddateEntered);
-  if (parseddateEntered > currentDate) {
+  parsedCurrentDate = Date.parse(currentDate);
+
+  // converting entered date to local time (the date only formart is defaulting as UTC).
+
+  dateEntered = new Date(dateEntered); 
+  let localDateEntered = dateEntered.toLocaleDateString(); 
+  parsedDateEntered = Date.parse(localDateEntered);
+
+  console.log("current" + parsedCurrentDate);
+  console.log("entered" + parsedDateEntered);
+
+  if (parsedDateEntered > parsedCurrentDate) {
     alert("Date of birth cannot be later than today");
     location.reload();
     throw Error();
@@ -125,3 +130,5 @@ function getAkanName() {
     alert("Please Pick Your Gender!");
   }
 }
+
+
