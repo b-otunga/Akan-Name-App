@@ -35,6 +35,7 @@ var day;
 function getTodayDate() {
   currentDate = new Date();
   console.log(currentDate);
+  return currentDate;
 }
 
 // FETCH DATE entered by user on input
@@ -53,12 +54,17 @@ function getDate() {
   var DD = dateEntered.slice(8, 10);
   DD = parseInt(DD);
 
+  console.log(DD, MM, CC, YY);
+
   // CALCULATE DAY OF BIRTH
   day =
     (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + (DD - 0.5)) %
     7;
-
+console.log("one day" + day);
   day = Math.floor(day);
+  day = Math.abs(day);
+
+console.log("finalday" + day);
 }
 
 // function limiting date selection to today or before
