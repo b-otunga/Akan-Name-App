@@ -6,6 +6,14 @@ body {
 
 }
 
+#oneP{
+  position: absolute;
+  bottom: 0%;
+  left: 0.7%;
+  font-size: smaller;
+
+}
+
 #bgVideo {
     position: fixed;
     right: 0;
@@ -29,10 +37,11 @@ body {
   background: transparent;
 }
   #container{
+    position: relative;
     display:flex;
     align-items: center;
     flex-direction: column;
-    height: 75%;
+    height: 75vh;
     width: 70%;
     background-color: rgb(30, 30, 76);
     color: rgb(242, 240, 255);

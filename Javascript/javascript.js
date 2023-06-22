@@ -1,3 +1,6 @@
+document.getElementById("oneP").innerHTML = `© Copyright: Bill Otunga - ${new Date().getFullYear()}`
+
+
 const DAYS_OF_THE_WEEK = [
   "Sunday",
   "Monday",
@@ -34,37 +37,17 @@ var day;
 // calculate today's date
 function getTodayDate() {
   currentDate = new Date();
-  console.log(currentDate);
   return currentDate;
 }
 
 // FETCH DATE entered by user on input
 function getDate() {
-  dateEntered = document.getElementById("Date").value;
+  dateEntered = document.getElementById("Date").value.toString();
   dateEntered = dateEntered.toString();
 
-  // slice dateEntered to get century(CC), year(YY), month(MM), and date(DD) to be used in formular.
-  var CC = dateEntered.slice(0, 2);
-  // console.log(CC);
-  CC = parseInt(CC);
-  var YY = dateEntered.slice(2, 4);
-  YY = parseInt(YY);
-  var MM = dateEntered.slice(5, 7);
-  MM = parseInt(MM);
-  var DD = dateEntered.slice(8, 10);
-  DD = parseInt(DD);
+  day=new Date(dateEntered).getDay();
 
-  console.log(DD, MM, CC, YY);
 
-  // CALCULATE DAY OF BIRTH
-  day =
-    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + (DD - 0.5)) %
-    7;
-console.log("one day" + day);
-  day = Math.floor(day);
-  day = Math.abs(day);
-
-console.log("finalday" + day);
 }
 
 // function limiting date selection to today or before
@@ -82,7 +65,7 @@ function noFutureDate() {
   console.log("entered" + parsedDateEntered);
 
   if (parsedDateEntered > parsedCurrentDate) {
-    alert("Date of birth cannot be later than today");
+    alert("Date of birth cannot be after today");
     location.reload();
     throw Error();
   }
@@ -96,6 +79,8 @@ function getGenderValue() {
 
   return gender;
 }
+
+
 
 // CREATE AKAN NAME
 
